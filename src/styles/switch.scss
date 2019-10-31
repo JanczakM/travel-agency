@@ -1,7 +1,9 @@
 .switchWrapper {
   position: relative;
+  animation-name: move;
+  animation-duration: 1s;
 
-  > :first-child ~ * {
+  > :first-child {
     position: absolute;
     top: 0;
     left: 0;
