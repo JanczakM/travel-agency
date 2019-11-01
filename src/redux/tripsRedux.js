@@ -11,11 +11,11 @@ export const getFilteredTrips = ({trips, filters}) => {
     output = output.filter(trip => pattern.test(trip.name));
   }
 
-  // TODO - filter by duration
+  // filter by duration
+  output = output.filter(trip => trip.days >= filters.duration.from && trip.days <= filters.duration.to);
 
-  // TODO - filter by tags
+  // filter by tags
   if(filters.tags.length > 0){
-    console.log(output, filters.tags);
     for(let filterTag of filters.tags){
       output = output.filter(trip => trip.tags.indexOf(filterTag) > -1);
     }
