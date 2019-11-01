@@ -14,6 +14,12 @@ export const getFilteredTrips = ({trips, filters}) => {
   // TODO - filter by duration
 
   // TODO - filter by tags
+  if(filters.tags.length > 0){
+    console.log(output, filters.tags);
+    for(let filterTag of filters.tags){
+      output = output.filter(trip => trip.tags.indexOf(filterTag) > -1);
+    }
+  }
 
   // TODO - sort by cost descending (most expensive goes first)
 
