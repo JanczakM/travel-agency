@@ -1,11 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import pricing from '../../../data/pricing.json';
 //import styles from './OrderForm.scss';
 import OrderSummary from '../OrderSummary/OrderSummary';
+import OrderOption from '../OrderOption/OrderOption';
 import {Row, Col} from 'react-flexbox-grid';
 
 const OrderForm = props => (
   <Row>
+    {pricing.map(option => (
+      <Col md={4} key={option.id}>
+        <OrderOption {...option}/>
+      </Col>
+    ))}
     <Col xs={12}>
       <OrderSummary totalCost={props.tripCost} tripOptions={props.options}/>
     </Col>
