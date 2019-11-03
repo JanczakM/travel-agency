@@ -8287,7 +8287,8 @@
     "currencies": [
       {
         "code": "TRY",
-        "name": "Turkish lira"
+        "name": "Turkish lira",
+        "symbol": "TL"
       }
     ],
     "languages": [
