@@ -9,7 +9,7 @@ const OrderOptionNumber = ({currentValue, setOptionValue, limits, price}) => (
     <input type='number'
       className={styles.inputSmall}
       value={currentValue} min={limits.min} max={limits.max}
-      onChange={event => setOptionValue(event.currentTarget.value)} /> paid {formatPrice(price)}
+      onChange={event => setOptionValue(parseInt(event.currentTarget.value))} /> paid {formatPrice(price)}
   </div>
 );
 

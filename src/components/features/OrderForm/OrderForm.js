@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import pricing from '../../../data/pricing.json';
-//import styles from './OrderForm.scss';
+import styles from './OrderForm.scss';
 import OrderSummary from '../OrderSummary/OrderSummary';
 import OrderOption from '../OrderOption/OrderOption';
 import {Row, Col} from 'react-flexbox-grid';
@@ -9,7 +9,7 @@ import {Row, Col} from 'react-flexbox-grid';
 const OrderForm = props => (
   <Row>
     {pricing.map(option => (
-      <Col md={4} key={option.id}>
+      <Col md={4} key={option.id} className={styles.formField}>
         <OrderOption {...option} currentValue={props.options[option.id]} setOrderOption={props.setOrderOption}/>
       </Col>
     ))}
