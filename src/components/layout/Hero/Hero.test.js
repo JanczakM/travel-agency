@@ -8,9 +8,9 @@ describe('Component Hero', () => {
     expect(component).toBeTruthy();
   });
 
-  /*it('should throw error without required props', () => {
+  it('should throw error without required props', () => {
     expect(() => shallow(<Hero />)).toThrow();
-  });*/
+  });
 
   it('should render correct title and image', () => {
     const expectedTitle = 'Lorem ipsum';
