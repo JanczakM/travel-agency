@@ -29,10 +29,6 @@ describe('Component TripSummary', () => {
     expect(component.find('.details').text()).toContain(expectedDays);
   });
 
-  it('should throw error without required props', () => {
-    expect(() => shallow(<TripSummary tags={['abc']}/>)).toThrow();
-  });
-
   it('should render tags properly', () => {
     const expectedTags = ['abc', 'def', 'ghi'];
     const component = shallow(<TripSummary tags={expectedTags} id='abc' image='test.jpg' days={5} cost='5euro' name='abc'/>);
